@@ -1,5 +1,7 @@
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5003/api';
+// services/api.ts
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;  // <- use the correct env var
+
 
 // API Service Class
 class ApiService {
