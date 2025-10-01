@@ -90,7 +90,7 @@ class ApiService {
       message: string;
       token: string;
       user: any;
-    }>('/auth/register', {
+    }>('/api/auth/register', {
       method: 'POST',
       body: JSON.stringify(userData),
     });
@@ -108,7 +108,7 @@ class ApiService {
       message: string;
       token: string;
       user: any;
-    }>('/auth/login', {
+    }>('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
@@ -124,7 +124,7 @@ class ApiService {
     const response = await this.request<{
       success: boolean;
       message: string;
-    }>('/auth/logout', {
+    }>('/api/auth/logout', {
       method: 'POST',
     });
 
@@ -149,7 +149,7 @@ class ApiService {
       success: boolean;
       message: string;
       user: any;
-    }>('/auth/updatedetails', {
+    }>('/api/auth/updatedetails', {
       method: 'PUT',
       body: JSON.stringify(userData),
     });
@@ -163,7 +163,7 @@ class ApiService {
       success: boolean;
       message: string;
       token: string;
-    }>('/auth/updatepassword', {
+    }>('/api/auth/updatepassword', {
       method: 'PUT',
       body: JSON.stringify(passwordData),
     });
